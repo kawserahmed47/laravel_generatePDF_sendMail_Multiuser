@@ -31,12 +31,12 @@ Route::post('/changeRole','AdminController@changeRole')->name('changeRole');
 
 
 
-Route::get('/invoice','HomeController@invoice')->name('invoice');
+Route::get('/','HomeController@invoice')->name('invoice');
 Route::post('/insertInvoice','HomeController@insertInvoice')->name('insertInvoice');
 
 
 
-Route::get('/','HomeController@index')->name('index');
+//Route::get('/','HomeController@index')->name('index');
 Route::get('/viewApplication', 'HomeController@viewApplication')->name('viewApplication')->middleware('auth');
 Route::get('/viewInvoice/{id}', 'HomeController@viewInvoice')->name('viewInvoice');
 Route::get('/printInvoice/{id}', 'HomeController@printInvoice')->name('printInvoice');
